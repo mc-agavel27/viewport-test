@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Responsive Code</title>
+    <title>Responsive Cards</title>
     <style>
       body {
-        margin: 0;
-        padding: 0;
-      }
+  margin: 0;
+  padding: 0;
+}
 
-      .container {
-        width: 100vw;
-        height: 100vh;
-        background-color: #f0f8ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-        box-sizing: border-box;
-      }
+.page-title {
+  text-align: center;
+  color: #333;
+  margin: 20px 0;
+  /* Make title text scale with viewport */
+  font-size: 5vw;
+}
 
-      .card {
-        background-color: #4a90e2;
-        color: white;
-        padding: 40px;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 18px;
-        flex: 1;
-        min-width: 250px;
-      }
+.container {
+  /* Make this take full viewport */
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f8ff;
+  /* Add flexbox properties */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #4a90e2;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  /* Make cards responsive */
+  flex: 1;
+  min-width: 250px;
+}
+
+.card-title {
+  margin: 0 0 10px 0;
+  /* Scale card titles with viewport */
+  font-size: 3vw;
+}
+
+.card-text {
+  margin: 0;
+  /* Scale card text with viewport */
+  font-size: 2vmin;
+}
     </style>
   </head>
   <body>
+    <h1 class="page-title">Responsive Layout Demo</h1>
     <div class="container">
-      <div class="card">Card 1</div>
-      <div class="card">Card 2</div>
-      <div class="card">Card 3</div>
-      <div class="card">Card 4</div>
+      <div class="card">
+        <h2 class="card-title">Card 1</h2>
+        <p class="card-text">Resize the browser!</p>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Card 2</h2>
+        <p class="card-text">Watch the text scale</p>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Card 3</h2>
+        <p class="card-text">Everything responds</p>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Card 4</h2>
+        <p class="card-text">To viewport size</p>
+      </div>
     </div>
   </body>
 </html>
